@@ -2,15 +2,15 @@
   "name": "es6test",
   "version": "1.0.0",
   "description": "This is a chance to test es6 with node 9.3",
-  "main": "index.js",
+  "main": "assignment1.js",
   "scripts": {
     "test": "echo \"Error: no test specified\" && exit 1",
     "start": "node assignment1.js",
-    "dev": "node index.js"
+    "dev": "node assignment1.js"
   },
   "repository": {
     "type": "git",
-    "url": "git+https://github.com/rhildred/es6test.git"
+    "url": "git+https://github.com/VulpineGorgon/prog8110assignment1.git"
   },
   "keywords": [
     "node",
@@ -18,12 +18,12 @@
     "problem",
     "solving"
   ],
-  "author": "Rich Hildred",
+  "author": "Konrad Gaerdes",
   "license": "MIT",
   "bugs": {
-    "url": "https://github.com/rhildred/es6test/issues"
+    "url": "https://github.com/VulpineGorgon/prog8110assignment1.git"
   },
-  "homepage": "https://github.com/rhildred/es6test#readme",
+  "homepage": "https://github.com/VulpineGorgon/prog8110assignment1.git#readme",
   "dependencies": {
     "express": "*"
   },
