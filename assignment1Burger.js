@@ -1,3 +1,5 @@
+const Order = require("./assignment1Order");
+
 const OrderState = Object.freeze({
     WELCOMING:   Symbol("welcoming"),
     SIZE:   Symbol("size"),
@@ -5,21 +7,22 @@ const OrderState = Object.freeze({
     DRINKS:  Symbol("drinks")
 });
 
-module.exports = class Order{
+module.exports = class BurgerOrder extends Order{
     constructor(){
+        super();
         this.stateCur = OrderState.WELCOMING;
         this.sSize = "";
         this.sToppings = "";
         this.sDrinks = "";
-        this.sItem = "pizza";
+        this.sItem = "burger";
     }
     handleInput(sInput){
         let aReturn = [];
         switch(this.stateCur){
             case OrderState.WELCOMING:
                 this.stateCur = OrderState.SIZE;
-                aReturn.push("Welcome to Fratello's pizza.");
-                aReturn.push("What size pizza would you like?");
+                aReturn.push("Welcome to Konrad's Burger Palace.");
+                aReturn.push("What size burger would you like?");
                 break;
             case OrderState.SIZE:
                 this.stateCur = OrderState.TOPPINGS
@@ -32,7 +35,8 @@ module.exports = class Order{
                 aReturn.push("Would you like drinks with that?");
                 break;
             case OrderState.DRINKS:
-                if(sInput.toLowerCase != "no"){
+                this.isDone(true);
+                if(sInput.toLowerCase() != "no"){
                     this.sDrinks = sInput;
                 }
                 aReturn.push("Thank-you for your order of");
